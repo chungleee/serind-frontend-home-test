@@ -29,12 +29,15 @@ const Search = ({ handleSetMovies }) => {
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div>
 				<input
+					className='border'
 					name='title'
 					type='text'
 					placeholder='title'
 					{...register('title', { required: true })}
 				/>
-				{errors.title && <small>This field is required</small>}
+				{errors.title && (
+					<small className='text-red-500'>This field is required</small>
+				)}
 			</div>
 			<div>
 				<select name='type' {...register('type')}>
@@ -46,6 +49,7 @@ const Search = ({ handleSetMovies }) => {
 			</div>
 			<div>
 				<input
+					className='border'
 					placeholder='year'
 					type='text'
 					name='year'
