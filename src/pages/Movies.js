@@ -15,10 +15,12 @@ const Movies = () => {
 		<div>
 			<Search handleSetMovies={handleSetMovies} />
 
-			{movies &&
-				movies.map((movie) => {
-					return <MovieCard key={movie.imdbID} movieData={movie} />;
-				})}
+			<div className='flex flex-wrap items-center'>
+				{movies &&
+					movies.map((movie) => {
+						return <MovieCard key={movie.imdbID} movieData={movie} />;
+					})}
+			</div>
 		</div>
 	);
 };
