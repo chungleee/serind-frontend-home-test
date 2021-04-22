@@ -7,7 +7,7 @@ function App() {
 		// Router setup
 		<Router>
 			<Route exact path='/' component={Movies} />
-			<Route exact path='/movie-details' component={MovieDetails} />
+			<Route exact path='/:movieID' component={MovieDetails} />
 		</Router>
 	);
 }
